@@ -40,13 +40,13 @@ By using **HTML**, **CSS**, **JavaScript**, **PHP**, and **SQL**, the platform c
 ## 🖼 Visual Demonstrations  
 
 **Homepage & Login Screen 🔑**  
-![Homepage](images/demo1.png)  
+![Homepage](images/demo3.png)  
 
 **Booking Form 📅**  
 ![Booking Form](images/demo2.png)  
 
 **Admin Revenue Dashboard 📈**  
-![Dashboard](images/demo3.png)  
+![Dashboard](images/demo1.png)  
 
 ---
 
