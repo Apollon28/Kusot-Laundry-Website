@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>KUSOT LAUNDRY</title>
+        <link rel="icon" type="image/x-icon" href="favicon-32x32.png">
+        <link rel="stylesheet" href="FINAL-style.css">
+    </head>
+    <body>
+        <style>
+            body, html {
+                overflow: hidden;
+            }
+        </style>
+        <div class="main">
+            <div class="navbar">
+                <div class="lg-about">
+                    <a href="index.html" >
+                    <img src="FINAL-logo.png" height="80" width="80">
+                    </a>
+                </div>
+                <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </label>
+            <div id="menu-options" class="menu-options">
+                <a href="FINAL-laundryservices.html">Services</a>
+                <a href="FINAL-about.html">About</a>
+                <a href="FINAL-faqs.html">FAQs</a>
+                <a href="profile.php">Account</a>
+                <a href="order.php">Orders</a>
+                <a href="index.html">Logout</a>
+            </div>
+                    <div class="headabout">
+                        <h3 class="lanser">ABOUT - The Developers</h3>
+                    </div>
+                
+
+                    <div class="developer-gallery-container">
+                        <div class="developer" id="developer1">
+                            <img src="FINAL-sean.jpg" alt="Sean Ray S. Bongansiso">
+                            <div class="developer-info">
+                                <h3>SEAN RAY S. BONGANSISO</h3>
+                                <h4>Team Lead</h4>
+                                <p>3rd Year BS Computer Engineering student from FEU Institute of Technology. <br>He was in charge of overseeing all the progress and development of the project.</p>
+                            </div>
+                        </div>
+                        <div class="developer" id="developer2">
+                            <img src="FINAL-aizen.jpg" alt="Aizen Johann P. Calilan">
+                            <div class="developer-info">
+                                <h3>AIZEN JOHANN P. CALILAN</h3>
+                                <h4>UI/UX Design</h4>
+                                <p>3rd Year BS Computer Engineering student from FEU Institute of Technology. <br>He was in charge of developing the user interface of the website and its design.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="developer" id="developer3">
+                            <img src="FINAL-jyke.jpg" alt="Jyke Jenfrey C. Gapasin">
+                            <div class="developer-info">
+                                <h3>JYKE JENFREY C. GAPASIN</h3>
+                                <h5>Database Design</h5>
+                                <p>3rd Year BS Computer Engineering student from FEU Institute of Technology. <br>He was the one in-charge in developing database system needed in the website.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="developer" id="developer4">
+                            <img src="FINAL-ivan.jpg" alt="Ivan Crisruf M. Malitao">
+                            <div class="developer-info">
+                                <h3>IVAN CRISRUF M. MALITAO</h3>
+                                <h5>Database Design</h5>
+                                <p>3rd Year BS Computer Engineering student from FEU Institute of Technology. <br>He was the one in-charge in developing database system needed in the website.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="developer" id="developer5">
+                            <img src="FINAL-lyka.jpg" alt="Lyka Mariel A. Villaflores">
+                            <div class="developer-info">
+                                <h6>LYKA MARIEL A. VILLAFLORES</h6>
+                                <h4>UI/UX Design</h4>
+                                <p>3rd Year BS Computer Engineering student from FEU Institute of Technology. <br>She was in charge of developing the user interface of the website and its design.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button id="nextButton">Next</button>
+                    
+                    <script>
+                        const developers = document.querySelectorAll('.developer');
+                        let currentIndex = 0;
+                    
+                        function showDeveloper(index) {
+                            developers.forEach(developer => {
+                                developer.classList.remove('active');
+                            });
+                            developers[index].classList.add('active');
+                        }
+                    
+                        document.getElementById('nextButton').addEventListener('click', function() {
+                            currentIndex++;
+                            if (currentIndex >= developers.length) {
+                                currentIndex = 0;
+                            }
+                            showDeveloper(currentIndex);
+                        });
+                    
+                        // Show the first developer initially
+                        showDeveloper(currentIndex);
+                    </script>
+        </body>
+            
+
+</html>

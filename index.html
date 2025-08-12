@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KUSOT LAUNDRY</title>
+    <link rel="icon" type="image/x-icon" href="favicon-32x32.png">
+    <link rel="stylesheet" href="FINAL-style.css">
+</head>
+<body>
+
+<div class="main">
+    <div class="navbar">
+
+        
+
+        <div class="icon">
+            <h2 class="logo">KUSOT LAUNDRY</h2>
+        </div>
+
+        <div class="content">
+            <p class="par">KUSOT Laundry offers different services that <br> can help you to save time, one click at a time! <br> To know more about our services, click <br> the button below and start your KUSOT journey <br> with us!</p>
+            <button class="click"><a href="FINAL-signup.html"><font fontsize="10" color="white">BOOK NOW</font></a></button>
+        </div>
+    </div>
+    <div class="lg">
+        <a href="index.html" >
+            <img src="logo.png" height="120" width="120">
+        </a>
+    </div>
+    <div class="wm">
+        <img src="wm.png" height="550" width="550">
+    </div>
+    <div class="available">
+        <h2 class="avail-ser">AVAILABLE SERVICES</h2>
+    </div>
+    <div class="gallery-container" id="galleryContainer">
+        <div class="service" id="service1">
+            <div class="service-info">
+                <div class="text-background">
+                <h3>REGULAR WASH</h3>
+                <p>Price starts at only 120 pesos</p>
+            </div>
+        </div>
+        </div>
+        <div class="service" id="service2">
+            <div class="service-info">
+                <div class="text-background">
+                <h3>DRY CLEAN</h3>
+                <p>Per piece price</p>
+            </div>
+        </div>
+        </div>
+        <div class="service" id="service3">
+            <div class="service-info">
+                <div class="text-background">
+                <h3>SELF-SERVICE</h3>
+                <p>Reserve a laundromat now!</p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="arrow-button left-arrow" id="leftArrow">&#10094;</div>
+    <div class="arrow-button right-arrow" id="rightArrow">&#10095;</div>
+</div>
+ 
+</div>
+<script>
+    const galleryContainer = document.getElementById('galleryContainer');
+    const leftArrow = document.getElementById('leftArrow');
+    const rightArrow = document.getElementById('rightArrow');
+
+    let currentIndex = 0;
+    const services = document.querySelectorAll('.service');
+
+    function showService(index) {
+        services.forEach((service, i) => {
+            if (i === index) {
+                service.style.display = 'block';
+            } else {
+                service.style.display = 'none';
+            }
+        });
+    }
+
+    leftArrow.addEventListener('click', function() {
+        currentIndex = (currentIndex - 1 + services.length) % services.length;
+        showService(currentIndex);
+    });
+
+    rightArrow.addEventListener('click', function() {
+        currentIndex = (currentIndex + 1) % services.length;
+        showService(currentIndex);
+    });
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowLeft') {
+            currentIndex = (currentIndex - 1 + services.length) % services.length;
+            showService(currentIndex);
+        } else if (event.key === 'ArrowRight') {
+            currentIndex = (currentIndex + 1) % services.length;
+            showService(currentIndex);
+        }
+    });
+
+    // Show the initial service
+    showService(currentIndex);
+</script>
+
+
+</body>
+</html>
+
